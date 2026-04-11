@@ -1,0 +1,11 @@
+
+
+<H1>CREATE A NEW ACCOUNT</H1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Username" name="username"><br><br>
+   <input type="password" placeholder="Password" name="password"><br><br>
+    <button type="submit">Sign Up</button>
+</form>
+
