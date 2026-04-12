@@ -214,19 +214,19 @@
     <div class="signup-container">
         <div class="signup-card">
             <div class="signup-header">
-                <h1><i class="bi bi-person-plus-fill"></i> Create Account</h1>
-                <p>Join Medha Hospital for quality healthcare services</p>
+                <h1><i class="bi bi-person-plus-fill"></i> Login</h1>
+                <p>Login to Medha Hospital  for quality healthcare services</p>
             </div>
             <div class="signup-body">
                 <form method="POST">
                     {% csrf_token %}
                     <input type="text" placeholder="Username" name="username"><br><br>
                     <input type="password" placeholder="Password" name="password"><br><br>
-                    <button type="submit">Signup</button>
+                    <button type="submit">Login</button>
                 </form>
 
                 <div class="login-link">
-                    <p>Already have an account? <a href="/login">Login here</a></p>
+                    <p>D'ont have an account? <a href="/signup">Sign up here</a></p>
                 </div>
             </div>
         </div>
