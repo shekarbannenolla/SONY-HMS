@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0 10px;
+            font-size: 2rem;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            border-radius: 8px;
+            width: 45%;
+            margin: 10px;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f3ff);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard Home</h1>
+    <div class="card-container">
+        <a href="/patients/" class="card"><strong>Patients</strong></a>
+        <a href="/doctors/" class="card"><strong>Doctors</strong></a>
+        <a href="/appointments/" class="card"><strong>Appointments</strong></a>
+        <a href="/logout/" class="card"><strong>Logout</strong></a>
+    </div>
+</body>
+</html>

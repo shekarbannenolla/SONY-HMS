@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'patients',
     'doctors',
     'marketing',
-    'users'
+    'users',
+    'dashboard',
+    'appoinments'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/LOGIN/'
+
