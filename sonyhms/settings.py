@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'marketing',
     'users',
     'dashboard',
-    'appoinments'
+    'appointments'
 ]
 
 MIDDLEWARE = [
