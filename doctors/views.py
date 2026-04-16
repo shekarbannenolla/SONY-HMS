@@ -16,7 +16,7 @@ def doctor_edit(request, pk):
                 doctor.name = request.POST.get('name')
                 doctor.specialization = request.POST.get('specialization')
                 doctor.save()
-                return redirect('/doctors')
+                # return redirect('/doctors')
           return render(request, 'doc_edit.html', {'doctor': doctor})
 
 @login_required
