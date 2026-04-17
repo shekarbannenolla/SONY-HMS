@@ -130,10 +130,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/LOGIN/'
 
 
-EMAIL_BACKEND = "anymail.backends.resend.EmailBackend"
 
-ANYMAIL = {
-    "RESEND_API_KEY": "...."
-}
+RESEND_API_KEY = "re_EnQonVTQ_6fUTMPBSUhQ6zGoby3RaKdsY"
 
-DEFAULT_FROM_EMAIL = "onboarding@resend.dev"
+#re_EnQonVTQ_6fUTMPBSUhQ6zGoby3RaKdsY
+

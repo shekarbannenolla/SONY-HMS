@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
-from django.core.mail import send_mail
+import resend
+from django.conf import settings
 
 # Create your views here.
 def signup(request):
@@ -10,14 +11,16 @@ def signup(request):
         password = request.POST['password']
         user = User.objects.create_user(
             username=username,
-            password=password   
+            password=password
         )
-        send_mail (
-             subject="Hello, Thanks for signning up",
-             message="Your account has been created successfully.",
-             from_email="MedhaHMS <onboard@resend.dev>",
-             recipient_list=[user.email],
-             html_message="<strong>it works!</strong>",
+        resend.api_key = settings.RESEND_API_KEY
+        resend.Emails.send(
+        {
+            'from'   : 'onboard@resend.dev',
+            'to'     :['bannenollashekar@gmail.com'],
+            'subject': 'Welcome to Medha Hospital Management System',
+            'html'   : f"<h1>Welcome {user.username}</h1><p>We are glad to have you on board!</p>"
+        }
         )
         print(f'sent email to {user.email}')
         login(request, user)
